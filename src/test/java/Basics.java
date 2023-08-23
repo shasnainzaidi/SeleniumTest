@@ -23,7 +23,7 @@ public class Basics {
         driver.findElement(By.xpath("//input[@id='name']")).sendKeys("Hello");
 //         click Confirm
         driver.findElement(By.cssSelector("input[id='confirmbtn']")).click();
-
+// Enter Country nane
 //         Confirm Alert
 
         driver.switchTo().alert().accept();
