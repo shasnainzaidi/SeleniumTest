@@ -29,6 +29,7 @@ public void BasicTest() {
 	driver.switchTo().alert().accept();
 	
 	
+	}
 	
 	
 	
