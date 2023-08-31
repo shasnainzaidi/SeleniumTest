@@ -35,9 +35,7 @@ public class Basics {
      // Radio Buttons
     	List<WebElement> radioButtons = driver.findElements(By.cssSelector("input[class='radioButton']"));
     	for(int i = 0; i <= 2; i++) {
-    	    WebElement getOne = radioButtons.get(i);
-    	    getOne.click();
-    	    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    		radioButtons.get(i).click();	
     	}
     	
         driver.quit();
