@@ -8,36 +8,32 @@ import org.testng.annotations.Test;
 
 public class LoginTest {
 
-    private WebDriver driver;
-
-    @BeforeTest
-    public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-    }
-
-    @Test
-    public void loginViaValidCredentials() throws InterruptedException {
-
-        driver.get("https://bayut.com");
-        driver.findElement(By.cssSelector("button[aria-label='Login'] ")).click();
-        driver.findElement(By.cssSelector("input[name='email']")).sendKeys("muhammad.haris@dubizzlelabs.com");
-        driver.findElement(By.cssSelector("input[name='password']")).sendKeys("1234567a");
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
-        String actualUsername = driver.findElement(By.cssSelector("[aria-label='Username']")).getText();
-        String expectedUsername = "Haris";
-        assert actualUsername.equals(expectedUsername);
-    }
-
-    @Test
-    public void loginViaInvalidCredentials() {
-        driver.get("https://bayut.com");
-        driver.findElement(By.cssSelector("button[aria-label='Login'] ")).click();
-        driver.findElement(By.cssSelector("input[name='email']")).sendKeys("muhammad.haris@dubizzlelabs.com");
-        driver.findElement(By.cssSelector("input[name='password']")).sendKeys("1234567b");
-        driver.findElement(By.cssSelector("button[type='submit']")).click();
-        assert driver.findElement(By.xpath("//div[text() = '* The email address and password do not match']")).isDisplayed();
-    }
+	private WebDriver driver;
+	
+@Test		// TODO Auto-generated method stub
+public void BasicTest() {
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
+	//1. Visit site
+	driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+	
+			//2. Enter Country Name
+	driver.findElement(By.xpath("//input[@id='autocomplete']")).sendKeys("Pakistan");
+	//3. Enter Name
+	driver.findElement(By.cssSelector("input[id='name']")).sendKeys("Hasnain");
+	
+	//3. Click Confirm
+	driver.findElement(By.cssSelector("input[id='confirmbtn']")).click();	
+			
+		//4. Confirm Alert
+	driver.switchTo().alert().accept();
+	
+	
+	}
+	
+	
+	
+}
 
 
     @AfterTest
