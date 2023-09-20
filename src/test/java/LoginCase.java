@@ -1,30 +1,45 @@
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.Login;
 
 public class LoginCase {
 
 	private WebDriver driver;
-	
+	private Login login;
+	@BeforeTest
+	public void intialization(){
+//		login = new login(driver);
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+
+
+	}
+
+	@Test
+	public void test(){
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get("https://www.dubizzle.com.bh/en/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		login = new Login(driver);
+		login.loginBtn.click();
+	}
+
 	@Test
 	public void failedLoginEmail(){
+		login = new Login(driver);
 	//1. go to URL
-	
-	WebDriverManager.chromedriver().setup();
-    driver = new ChromeDriver();
     driver.get("https://www.dubizzle.com.bh/en/");
 
-    //
-    
 	//2. Click on Login button
-    driver.findElement(By.cssSelector("button[aria-label='Login']")).click();
+//    driver.findElement(By.cssSelector("button[aria-label='Login']")).click();
+	login.loginBtn.click();
     System.out.println("logged in button");
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //    driver.switchTo().alert().accept();
