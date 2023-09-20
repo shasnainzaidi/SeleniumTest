@@ -4,22 +4,37 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.Login;
+import pages.homepageObj;
 
 public class homepage {
 	
 	private WebDriver driver;
-	
+	private homepageObj homepage;
+
+	@BeforeTest 
+	public void intialization() {
+	//homepage = new homepageObj(driver);
+	WebDriverManager.chromedriver().setup();
+	 driver = new ChromeDriver();
+		
+	}
+
 	@Test
 	public void keywordSearch(){
-		WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		
+
+		//WebDriverManager.chromedriver().setup();
+		 //driver = new ChromeDriver();
 		 driver.get("https://www.dubizzle.com.bh/en/");
-		 
+			homepage = new homepageObj(driver);
+
 		 //1. search a keyword in search bar
-		 driver.findElement(By.xpath("//input[@class='_162767a9']")).sendKeys("iphone 11 pro max");
+		 homepage.searchBar.sendKeys("iphone 11 pro max");
 		 
 		 //2. Click on search button
 		 driver.findElement(By.xpath("//button[@aria-label='Search']")).click();

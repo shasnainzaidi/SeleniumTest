@@ -14,7 +14,6 @@ public class LoginCase {
 	private Login login;
 	@BeforeTest
 	public void intialization(){
-//		login = new login(driver);
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 
