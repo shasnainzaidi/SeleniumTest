@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class Basics {
 
-
     private WebDriver driver;
 
     @Test

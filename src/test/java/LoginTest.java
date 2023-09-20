@@ -30,11 +30,6 @@ public void BasicTest() {
 	
 	
 	}
-	
-	
-	
-}
-
 
     @AfterTest
     public void closeDriver() {
