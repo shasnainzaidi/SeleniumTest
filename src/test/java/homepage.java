@@ -37,7 +37,7 @@ public class homepage {
 		 homepage.searchBar.sendKeys("iphone 11 pro max");
 		 
 		 //2. Click on search button
-		 driver.findElement(By.xpath("//button[@aria-label='Search']")).click();
+		 homepage.searchBtn.click();
 		 
 		 //3. Verify if keyword is searched on search page.
 		String searchKeyword =  driver.findElement(By.cssSelector("._888f7099")).getText();

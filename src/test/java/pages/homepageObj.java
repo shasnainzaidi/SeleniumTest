@@ -11,6 +11,9 @@ public class homepageObj {
 	
 	@FindBy(xpath = "//input[@class='_162767a9']")
 	public WebElement searchBar;
+
+	@FindBy(xpath = "//button[@aria-label='Search']")
+	public WebElement searchBtn;
 	
 	public homepageObj(WebDriver driver) {
         this.driver = driver;
