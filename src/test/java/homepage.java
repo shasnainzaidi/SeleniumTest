@@ -156,12 +156,31 @@ public void searchFilter(){
 	        		driver.navigate().back();
 
 	        	}
+	        		
+	        }
+	        
+	        @Test 
+	        public void footerLinks() {
 	        	
+	        	WebDriverManager.chromedriver().setup();
+	        	driver = new ChromeDriver();
+	        	driver.get("https://www.dubizzle.com.bh/en/");
 	        	
+	        	List <WebElement> elements = driver.findElements(By.xpath("(//span[@class='_5e159053'])"));
 	        	
+	        	for (int i=0; i<=14; i++) {
+	        		WebElement el = elements.get(i);
+	        	System.out.println("Started loop");
+	        	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	        	System.out.println("Waited");
+	        	System.out.println("Element Clicked");
+	        	driver.navigate().back();
+	        	
+	        	}
 	        	
 	        	
 	        }
+	        
 	        
 	        
 	 
