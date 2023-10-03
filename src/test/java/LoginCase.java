@@ -38,6 +38,7 @@ public class LoginCase {
 
 	//2. Click on Login button
 //    driver.findElement(By.cssSelector("button[aria-label='Login']")).click();
+    
 	login.loginBtn.click();
     System.out.println("logged in button");
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -51,7 +52,7 @@ public class LoginCase {
     System.out.println("clicked email button");
 
     //4. Enter a valid Email
-    driver.findElement(By.xpath("//input[@id='email']")).sendKeys("hasnain.zaidi@empglabs.com");
+    login.email.sendKeys("hasnain.zaidi@empglabs.com");
     // 5. Click on next
     driver.findElement(By.xpath("(//span[@class='_5079de6b be13fe44'])[2]")).click();
 	//5. Enter Password

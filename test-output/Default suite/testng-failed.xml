@@ -5,7 +5,7 @@
     <classes>
       <class name="homepage">
         <methods>
-          <include name="keywordSearch"/>
+          <include name="keySearch"/>
           <include name="intialization"/>
         </methods>
       </class> <!-- homepage -->
