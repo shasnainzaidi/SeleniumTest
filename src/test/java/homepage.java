@@ -181,6 +181,33 @@ public void searchFilter(){
 	        	
 	        }
 	        
+	      @Test
+	      public void allCat() {
+	    	  
+	    	  WebDriverManager.chromedriver().setup();
+	    	  driver = new ChromeDriver();
+	    	  driver.get("https://www.dubizzle.com.bh/en/");
+	    	  
+	    	  driver.findElement(By.xpath("//div[@class='f4cbb336']")).click();
+	    	  String categoryClicked = driver.findElement(By.xpath("(//a[@href='/en/vehicles/'])[1]")).getText();
+
+	    	  driver.findElement(By.xpath("(//a[@href='/en/vehicles/'])[1]")).click();
+	    	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    	  //Assertion
+	    	  String categoryName = driver.findElement(By.xpath("(//span[@class='_7597a67d dd224544'])[1]")).getText();
+
+	    	  System.out.println(categoryName);
+	    	  Assert.assertEquals(categoryName, categoryClicked);
+	    	  
+	    	
+	    	  
+	    	  
+	    	  
+	    	  
+	    	  
+	      }
+	        
+	        
 	        
 	        
 	 
