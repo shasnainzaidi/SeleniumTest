@@ -1,5 +1,6 @@
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import javax.xml.xpath.XPath;
@@ -198,15 +199,57 @@ public void searchFilter(){
 
 	    	  System.out.println(categoryName);
 	    	  Assert.assertEquals(categoryName, categoryClicked);
-	    	  
+	      }
 	    	
 	    	  
-	    	  
-	    	  
+	    @Test
+	    public void aboutDG() {
+	    	
+	    		WebDriverManager.chromedriver().setup();
+	            driver = new ChromeDriver();
+	            driver.get("https://www.dubizzle.com.bh/en/");
+	            //1. click on element
+	            driver.findElement(By.xpath("(//span[@class='_5e159053'])[1]")).click();
+//	            driver.switchTo().window(windowHandle);
+	            Set<String> newWindow = driver.getWindowHandles();
+//	            Iterator<String> window = newWindow.iterator();
+	            for(String windowHandle : newWindow) {
+	            	driver.switchTo().window(windowHandle);
+	            }
+//	            driver.switchTo().window(newWindow.next());
+//	            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	            System.out.println(driver.getTitle());
+	            String actualTitle = driver.getTitle();
+	            String expectedTitle = "Dubizzle Group - Formerly EMPG";
+	            Assert.assertEquals(actualTitle, expectedTitle);
+	            driver.quit();
 	    	  
 	    	  
 	      }
-	        
+	      @Test
+	      public void contactUs() {
+		    	
+	    		WebDriverManager.chromedriver().setup();
+	            driver = new ChromeDriver();
+	            driver.get("https://www.dubizzle.com.bh/en/");
+	            //1. click on element
+	            driver.findElement(By.xpath("(//span[@class='_5e159053'])[3]")).click();
+//	            driver.switchTo().window(windowHandle);
+	            Set<String> newWindow = driver.getWindowHandles();
+//	            Iterator<String> window = newWindow.iterator();
+	            for(String windowHandle : newWindow) {
+	            	driver.switchTo().window(windowHandle);
+	            }
+//	            driver.switchTo().window(newWindow.next());
+//	            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	            System.out.println(driver.getTitle());
+	            String actualTitle = driver.getTitle();
+	            String expectedTitle = "Submit a request – dubizzle Bahrain";
+	            Assert.assertEquals(actualTitle, expectedTitle);
+	            driver.quit();
+	    	  
+	    	  
+	      }
 	        
 	        
 	        
