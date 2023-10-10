@@ -11,7 +11,7 @@
       <class name="homepage">
         <methods>
           <include name="searchFilter"/>
-          <include name="keywordSearch"/>
+          <include name="intialization"/>
         </methods>
       </class> <!-- homepage -->
     </classes>

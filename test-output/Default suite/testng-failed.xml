@@ -5,8 +5,8 @@
     <classes>
       <class name="homepage">
         <methods>
+          <include name="searchFilter"/>
           <include name="intialization"/>
-          <include name="contactUs"/>
         </methods>
       </class> <!-- homepage -->
     </classes>

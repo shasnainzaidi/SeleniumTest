@@ -25,7 +25,7 @@ public class homepage {
 	private WebDriver driver;
 	private homepageObj homepage;
 
-	@BeforeTest 
+	@BeforeTest (alwaysRun = true)
 	public void intialization() {
 	//homepage = new homepageObj(driver);
 	WebDriverManager.chromedriver().setup();
@@ -77,7 +77,7 @@ public class homepage {
 		
 		
 	}
-	@Test (groups="Sanity")
+	@Test 
 	
 public void searchFilter(){
 		
@@ -116,7 +116,7 @@ public void searchFilter(){
 	
 	}
 
-	 @Test
+	 @Test (groups="Sanity")
 	    public void catClick(){
 	        WebDriverManager.chromedriver().setup();
 	        driver = new ChromeDriver();
