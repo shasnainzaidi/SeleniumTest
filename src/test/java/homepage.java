@@ -58,7 +58,7 @@ public class homepage {
 		
 	}
 	
-	@Test (groups = {"Smoke"})
+	@Test 
 	public void verifyAllIn() throws InterruptedException {
 		
 		driver.get("https://www.dubizzle.com.bh/en/");
@@ -160,7 +160,7 @@ public void searchFilter(){
 	        		
 	        }
 	        
-	        @Test 
+	        @Test (groups = {"Smoke"})
 	        public void footerLinks() {
 	        	
 	        	WebDriverManager.chromedriver().setup();

@@ -1,29 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="13" passed="2" failed="0" skipped="0">
+<testng-results ignored="19" total="22" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-10T16:12:10 PKT" name="Suite" finished-at="2023-10-10T16:12:24 PKT" duration-ms="13838">
+  <suite started-at="2023-10-10T16:24:56 PKT" name="Suite" finished-at="2023-10-10T16:24:56 PKT" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- Suite -->
+  <suite started-at="2023-10-10T16:23:35 PKT" name="Suite (0)" finished-at="2023-10-10T16:24:35 PKT" duration-ms="59472">
     <groups>
       <group name="Sanity">
-        <method signature="homepage.catClick()[pri:0, instance:homepage@291ae]" name="catClick" class="homepage"/>
-        <method signature="homepage.keywordSearch()[pri:0, instance:homepage@291ae]" name="keywordSearch" class="homepage"/>
+        <method signature="homepage.catClick()[pri:0, instance:homepage@6a192cfe]" name="catClick" class="homepage"/>
+        <method signature="homepage.keywordSearch()[pri:0, instance:homepage@6a192cfe]" name="keywordSearch" class="homepage"/>
       </group> <!-- Sanity -->
     </groups>
-    <test started-at="2023-10-10T16:12:10 PKT" name="Test" finished-at="2023-10-10T16:12:24 PKT" duration-ms="13838">
+    <test started-at="2023-10-10T16:23:35 PKT" name="Test" finished-at="2023-10-10T16:24:35 PKT" duration-ms="59472">
       <class name="homepage">
-        <test-method is-config="true" signature="intialization()[pri:0, instance:homepage@291ae]" started-at="2023-10-10T16:12:10 PKT" name="intialization" finished-at="2023-10-10T16:12:12 PKT" duration-ms="1493" status="PASS">
+        <test-method is-config="true" signature="intialization()[pri:0, instance:homepage@6a192cfe]" started-at="2023-10-10T16:23:35 PKT" name="intialization" finished-at="2023-10-10T16:23:37 PKT" duration-ms="1505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intialization -->
-        <test-method signature="catClick()[pri:0, instance:homepage@291ae]" started-at="2023-10-10T16:12:12 PKT" name="catClick" finished-at="2023-10-10T16:12:21 PKT" duration-ms="9397" status="PASS">
+        <test-method signature="catClick()[pri:0, instance:homepage@6a192cfe]" started-at="2023-10-10T16:23:37 PKT" name="catClick" finished-at="2023-10-10T16:24:30 PKT" duration-ms="52580" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- catClick -->
-        <test-method signature="keywordSearch()[pri:0, instance:homepage@291ae]" started-at="2023-10-10T16:12:21 PKT" name="keywordSearch" finished-at="2023-10-10T16:12:24 PKT" duration-ms="2923" status="PASS">
+        <test-method signature="keywordSearch()[pri:0, instance:homepage@6a192cfe]" started-at="2023-10-10T16:24:30 PKT" name="keywordSearch" finished-at="2023-10-10T16:24:35 PKT" duration-ms="5364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keywordSearch -->
       </class> <!-- homepage -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- Suite (0) -->
+  <suite started-at="2023-10-10T16:24:35 PKT" name="All Test Suite" finished-at="2023-10-10T16:24:56 PKT" duration-ms="21376">
+    <groups>
+      <group name="Smoke">
+        <method signature="homepage.footerLinks()[pri:0, instance:homepage@3ce1e309]" name="footerLinks" class="homepage"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2023-10-10T16:24:35 PKT" name="Test" finished-at="2023-10-10T16:24:56 PKT" duration-ms="21376">
+      <class name="homepage">
+        <test-method is-config="true" signature="intialization()[pri:0, instance:homepage@3ce1e309]" started-at="2023-10-10T16:24:35 PKT" name="intialization" finished-at="2023-10-10T16:24:36 PKT" duration-ms="672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intialization -->
+        <test-method signature="footerLinks()[pri:0, instance:homepage@3ce1e309]" started-at="2023-10-10T16:24:36 PKT" name="footerLinks" finished-at="2023-10-10T16:24:56 PKT" duration-ms="20701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- footerLinks -->
+      </class> <!-- homepage -->
+    </test> <!-- Test -->
+  </suite> <!-- All Test Suite -->
 </testng-results>

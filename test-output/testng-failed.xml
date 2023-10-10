@@ -5,7 +5,7 @@
     <classes>
       <class name="homepage">
         <methods>
-          <include name="searchFilter"/>
+          <include name="verifyAllIn"/>
           <include name="intialization"/>
         </methods>
       </class> <!-- homepage -->

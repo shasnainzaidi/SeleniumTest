@@ -11,6 +11,7 @@
       <class name="homepage">
         <methods>
           <include name="verifyAllIn"/>
+          <include name="intialization"/>
         </methods>
       </class> <!-- homepage -->
     </classes>
