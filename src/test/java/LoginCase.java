@@ -30,7 +30,7 @@ public class LoginCase {
 		login.loginBtn.click();
 	}
 
-	@Test
+	@Test(groups="Smoke")
 	public void failedLoginEmail(){
 		login = new Login(driver);
 	//1. go to URL

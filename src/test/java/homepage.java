@@ -33,7 +33,7 @@ public class homepage {
 		
 	}
 
-	@Test
+	@Test (groups="Sanity")
 	public void keywordSearch(){
 		
 
@@ -58,7 +58,7 @@ public class homepage {
 		
 	}
 	
-	@Test
+	@Test (groups = {"Smoke"})
 	public void verifyAllIn() throws InterruptedException {
 		
 		driver.get("https://www.dubizzle.com.bh/en/");
@@ -77,7 +77,7 @@ public class homepage {
 		
 		
 	}
-	@Test 
+	@Test (groups="Sanity")
 	
 public void searchFilter(){
 		

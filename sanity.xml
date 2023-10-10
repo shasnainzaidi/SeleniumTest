@@ -2,13 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+	  <groups>
+		  <run>
+			  <include name="Sanity"></include>
+		  </run>
+	  </groups>
     <classes>
-      <class name=".homepage"/>
-      <class name=".LoginTest"/>
-      <class name=".NewTab"/>
-      <class name=".dropDown"/>
-      <class name=".Basics"/>
-      <class name=".LoginCase"/>
+      <class name="homepage"/>
+      <class name="LoginCase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
