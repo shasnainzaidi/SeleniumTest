@@ -11,6 +11,43 @@
         <maven.compiler.target>20</maven.compiler.target>
     </properties>
 
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.1.2</version>
+          <configuration>
+			  <suiteXmlFiles>
+				  <suiteXmlFile>${testngFile} </suiteXmlFile>
+			  </suiteXmlFiles>
+		  </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+<profiles>
+  <profile>
+    <id>smoke</id>
+    <properties>
+      <testngFile>smoke.xml</testngFile>
+    </properties>
+  </profile>
+  <profile>
+    <id>sanity</id>
+    <properties>
+      <testngFile>sanity.xml</testngFile>
+    </properties>
+  </profile>
+  <profile>
+    <id>e2e</id>
+    <properties>
+      <testngFile>sanityPlusSmoke.xml</testngFile>
+    </properties>
+  </profile>
+</profiles>
   <dependencies>
 
     <dependency>

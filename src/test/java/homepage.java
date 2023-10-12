@@ -13,12 +13,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.Login;
 import pages.homepageObj;
 
+@Listeners(Listners.class)
 public class homepage {
 	
 	private static final TimeUnit TimeUnit = null;
@@ -33,7 +35,7 @@ public class homepage {
 		
 	}
 
-	@Test (groups="Sanity")
+	@Test (groups={"Sanity", "Smoke"})
 	public void keywordSearch(){
 		
 

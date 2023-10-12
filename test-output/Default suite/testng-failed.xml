@@ -6,6 +6,10 @@
       <class name="homepage">
         <methods>
           <include name="verifyAllIn"/>
+          <include name="searchFilter"/>
+          <include name="aboutDG"/>
+          <include name="keywordSearch"/>
+          <include name="footerLinks"/>
           <include name="intialization"/>
         </methods>
       </class> <!-- homepage -->
