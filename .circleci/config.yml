@@ -16,4 +16,5 @@ jobs:
       - run: 
           name: Run specific tests
           command: mvn clean test -Psmoke
-        
+      - store_artifacts:
+          path: test-reports        
