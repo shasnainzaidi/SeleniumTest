@@ -8,7 +8,7 @@ workflows:
 jobs:
   first-job:
     docker: 
-      - image: cimg/jdk:20.0.1-browsers 
+      - image: cimg/openjdk:21.0.0
     steps:  
       - checkout 
       - run: mkdir test-reports 
