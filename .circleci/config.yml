@@ -5,7 +5,6 @@ workflow:
 jobs:
   -first-job
 
-  build: 
     docker: 
       - image: cimg/jdk:20.0.1-browsers 
     steps:  
