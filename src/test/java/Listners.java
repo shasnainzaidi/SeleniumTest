@@ -4,7 +4,8 @@ import org.testng.ITestResult;
 
 public class Listners implements ITestListener {
 	@Override		
-    public void onFinish(ITestContext arg0) {					
+    public void onFinish(ITestContext arg0) {	
+		System.out.println("Test Done");
         // TODO Auto-generated method stub				
         		
     }		

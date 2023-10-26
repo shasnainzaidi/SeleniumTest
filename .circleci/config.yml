@@ -1,0 +1,21 @@
+version: 2.1 
+
+workflow: 
+  first-workflow:
+jobs:
+  first-job:
+
+jobs: 
+  build: 
+    docker: 
+      - image: cimg/jdk:20.0.1-browsers 
+    steps:  
+      - checkout 
+      - run: mkdir test-reports 
+      - run: 
+          name: Download Selenium 
+          command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar 
+      - run: 
+          name: Start Selenium 
+          command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log 
+          background: true
