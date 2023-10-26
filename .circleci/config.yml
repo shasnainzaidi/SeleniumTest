@@ -1,10 +1,12 @@
 version: 2.1 
 
-workflow: 
+workflows: 
   first-workflow:
-jobs:
-  -first-job
+    jobs:
+      - first-job
 
+jobs:
+  first-job:
     docker: 
       - image: cimg/jdk:20.0.1-browsers 
     steps:  
