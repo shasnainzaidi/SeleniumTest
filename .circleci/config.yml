@@ -16,5 +16,7 @@ jobs:
       - run: 
           name: Run specific tests
           command: mvn clean test -Psmoke
+      - store_test_results:
+          path: /home/circleci/project/target/surefire-reports
       - store_artifacts:
           path: test-reports        
